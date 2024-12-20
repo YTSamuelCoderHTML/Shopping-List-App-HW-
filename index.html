@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Shopping List</title>
+</head>
+<body>
+    <h2>Shopping List</h2>
+    <input id="item" placeholder="Add item">
+    <button onclick="addItem()">Add</button>
+    <ul id="list"></ul>
+
+    <script>
+        function addItem() {
+            let item = document.getElementById("item").value;
+            if (item) {
+                document.getElementById("list").innerHTML += "<li>" + item + "<button onclick='this.parentElement.remove()'>Delete</button></li>";
+                document.getElementById("item").value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
